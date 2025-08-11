@@ -242,7 +242,7 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Projects Section */
+/* Projects Section
 .project-card {
     background: white;
     border-radius: 15px;
@@ -307,7 +307,96 @@ body {
 .project-tech .badge {
     font-size: 0.75rem;
     padding: 0.5rem 0.75rem;
+} */
+
+
+/* Projects Section */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    height: 100%;
 }
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    transition: var(--transition);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links {
+    text-align: center;
+}
+
+.project-content h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.project-content p {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Skills / Tech Stack Section */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;        /* Allow wrapping to next line */
+    gap: 8px;               /* Space between badges */
+    margin-top: 10px;
+}
+
+.project-tech .badge {
+    background: #007bff;
+    color: white;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;    /* Prevent line break inside badge */
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.project-tech .badge:hover {
+    background: #0056b3;    /* Hover effect */
+}
+
+
 
 /* Contact Section */
 .contact-item {
